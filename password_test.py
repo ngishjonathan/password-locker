@@ -16,10 +16,20 @@ class TestPassword(unittest.TestCase):
         self.assertEqual(self.new_password.user_name,"jymo")
         self.assertEqual(self.new_password.password,"3114")
 
-if __name__ == '__main__':
-        unittest.main()
-
     def test_save_password(self):
 
-        self.new_password.save_Password   
+        self.new_password.save_Password()
+        self.assertEqual(len(Password.password_list),1)
 
+
+
+    def test_save_multiple_contact(self):
+
+        self.new_password.save_Password() 
+        test_password = Password("Test","flo","boel","flock","7350")
+        self.assertEqual(len(Password.password_list),2)
+
+                  
+
+if __name__ ==  '__main__':
+        unittest.main()
