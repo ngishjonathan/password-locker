@@ -10,3 +10,7 @@ from password import Password
     def save_passwords(password):
 
         password.save_password()
+
+    def del_password(password):
+
+        password.delete_password()    
