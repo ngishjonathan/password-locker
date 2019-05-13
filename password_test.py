@@ -77,7 +77,7 @@ class TestPassword(unittest.TestCase):
 
         self.assertTrue(password_exist)
 
-    def test_displsy_all_contacts(self):
+    def test_display_all_passwords(self):
 
         self.assertEqual(Password.display_passwords(),Password.password_list)    
 

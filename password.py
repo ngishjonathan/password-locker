@@ -33,5 +33,12 @@ class Password:
             if password.user_name == user_name:
                 return True
 
+    @classmethod
+    def display_passwords(cls):
+
+        return cls.password_list
+
+
+
 
         return False        
