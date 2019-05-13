@@ -9,7 +9,7 @@ def create_password(flo,me,beat,joby):
 
 def save_passwords(password):
 
-    password.save_password()
+    password.save_Password()
 
 def del_password(password):
 
@@ -32,16 +32,16 @@ def main():
     print("Hello,What is your name?")
     user_name = input()
 
-    print(f"Hello{user_name}.what would u like to do?"
-    print('\n')
+    print(f"Hello {user_name}. What would u like to do?")
+    print ('\n')
 
     while True:
-        print("Use these short codes : cc - create a new password, dc - display password, fc -find a password, ex -exit the password list ")
+        print("Use these short codes : cc - create a credentials, dc - display password, fc -find a password, ex -exit the password list ")
         
         short_code = input().lower()
 
-        if short_code == 'cc'
-            print("New Password")
+        if short_code == 'cc':
+            print("Credential")
             print("-"*10)
 
             print("first_name")
@@ -56,46 +56,47 @@ def main():
             print("password")
             p_password = input()
 
-             save_passwords(create_password(f_name,l_name,u_user_name,p_password))
-                            print ('\n')
-                            print(f"New password {f_name} {l_name} created")
-                            print ('\n')
+            save_passwords(create_password(f_name,last_name,u_user_name,p_password))
 
-                    elif short_code == 'dc':
+            print ('\n')
+            print(f"New password {f_name} {last_name} created")
+            print ('\n')
 
-                            if display_passwords():
-                                    print("Here is a list of all your passwords")
-                                    print('\n')
+        elif short_code == 'dc':
 
-                                    for password in display_passwords():
-                                        print(f"{pasword.first_name} {password.last_name} {password.user_name} {password.password}")
+            if display_passwords():
+                print("Here is a list of all your passwords")
+                print('\n')
 
-                                    print('\n')
-                            else:
-                                    print('\n')
-                                    print("You dont seem to have any passwords saved yet")
-                                    print('\n')
+                for password in display_passwords():
+                    print(f"{password.first_name} {password.last_name} {password.user_name} {password.password}")
 
-                    elif short_code == 'fc':
+                print('\n')
+            else:
+                print('\n')
+                print("You dont seem to have any passwords saved yet")
+                print('\n')
 
-                            print("Enter the username you want to search for")
+        elif short_code == 'fc':
 
-                            search_number = input()
-                            if check_existing_passwords(search_user_name):
-                                    search_password = find_password(search_user_name)
-                                    print(f"{search_password.first_name} {search_password.last_name}")
-                                    print('-' * 20)
+            print("Enter the username you want to search for")
 
-                                    print(f"user_name.......{search_password.user_name}")
-                                    print(f"password.......{search_password.password}")
-                            else:
-                                    print("That password does not exist")
+            search_number = input()
+            if check_existing_passwords(search_user_name):
+                search_password = find_password(search_user_name)
+                print(f"{search_password.first_name} {search_password.last_name}")
+                print('-' * 20)
 
-                    elif short_code == "ex":
-                            print("Bye user_name")
-                            break
-                    else:
-                            print("I really didn't get that. Please use the short codes")
+                print(f"user_name.......{search_password.user_name}")
+                print(f"password.......{search_password.password}")
+            else:
+                print("That password does not exist")
+
+        elif short_code == "ex":
+            print("Bye")
+            break
+        else:
+            print("I really didn't get that. Please use the short codes")
 
 
 if __name__ == '__main__':
