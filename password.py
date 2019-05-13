@@ -26,4 +26,12 @@ class Password:
             if Password.user_name == user_name:
                 return Password
 
-    
+    @classmethod
+    def password_exist(cls,user_name):
+
+        for password in cls.password_list:
+            if password.user_name == user_name:
+                return True
+
+
+        return False        
