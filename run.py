@@ -21,4 +21,8 @@ from password import Password
 
     def check_existng_passwords(user_name):
 
-        return Password.password_exist(user_name)            
+        return Password.password_exist(user_name) 
+
+    def display_passwords():
+
+        return Password.display_passwords()              
