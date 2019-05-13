@@ -17,4 +17,8 @@ from password import Password
 
     def find_password(user_name):
 
-        return Password.find_by_user_name(user_name)        
+        return Password.find_by_user_name(user_name)
+
+    def check_existng_passwords(user_name):
+
+        return Password.password_exist(user_name)            
