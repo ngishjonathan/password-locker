@@ -36,7 +36,7 @@ def main():
     print ('\n')
 
     while True:
-        print("Use these short codes : cc - create a credentials, dc - display password, fc -find a password, ex -exit the password list ")
+        print("Use these short codes : cc - create a credentials, del - delete credential dc - display password, fc -find a password, ex -exit the password list ")
         
         short_code = input().lower()
 
@@ -59,7 +59,7 @@ def main():
             save_passwords(create_password(f_name,last_name,u_user_name,p_password))
 
             print ('\n')
-            print(f"New password {f_name} {last_name} created")
+            print(f"New credential {f_name} {last_name} created")
             print ('\n')
 
         elif short_code == 'dc':
@@ -77,12 +77,24 @@ def main():
                 print("You dont seem to have any passwords saved yet")
                 print('\n')
 
+        elif short_code == 'del':
+
+            print("Enter the username you want to delete")
+
+            search_user_name = input()
+            if check_existng_passwords(search_user_name):
+                search_password = find_password(search_user_name)
+                del_password(search_password)
+                print("account successfully deleted!")
+            else:
+                print("That account does not exist")
+
         elif short_code == 'fc':
 
             print("Enter the username you want to search for")
 
-            search_number = input()
-            if check_existing_passwords(search_user_name):
+            search_user_name = input()
+            if check_existng_passwords(search_user_name):
                 search_password = find_password(search_user_name)
                 print(f"{search_password.first_name} {search_password.last_name}")
                 print('-' * 20)

@@ -59,7 +59,6 @@ class TestPassword(unittest.TestCase):
 
     def test_find_password_by_user_name(self):
 
-        
         self.new_password.save_Password()
         test_password = Password("flo","boel","flock","7350")
         test_password.save_Password()
@@ -70,7 +69,6 @@ class TestPassword(unittest.TestCase):
 
     def test_password_exist(self):
 
-        
         self.new_password.save_Password
         test_password = Password("flo","boel","flock","7350")
         test_password.save_Password()
