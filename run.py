@@ -6,3 +6,7 @@ from password import Password
 
         new password = Password(flo,me,beat,3244)
         return new_password
+
+    def save_passwords(password):
+
+        password.save_password()
