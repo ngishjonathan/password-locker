@@ -44,4 +44,6 @@ To run the tests for the class file:
 ## Technologies Used
 Python3.6
 ## License
-MIT ©2019 Andrew mwangi
+This project is licensed under the MIT License - see the LICENSE.md file for details
+
+© Copyright Andrew Mwangi
