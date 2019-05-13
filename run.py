@@ -13,4 +13,8 @@ from password import Password
 
     def del_password(password):
 
-        password.delete_password()    
+        password.delete_password()
+
+    def find_password(user_name):
+
+        return Password.find_by_user_name(user_name)        
